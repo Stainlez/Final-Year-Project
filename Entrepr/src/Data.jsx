@@ -1,6 +1,7 @@
 export const data = [
     {
         id: "1",
+        hostid: "123",
         name: "Modest Explorer",
         price: 60,
         description: "The Modest Explorer is a van designed to get you out of the house and into nature. This beauty is equipped with solar panels, a composting toilet, a water tank and kitchenette. The idea is that you can pack up your home and escape for a weekend or even longer!",
@@ -9,6 +10,7 @@ export const data = [
     },
     {
         id: "2",
+        hostid: "123",
         name: "Beach Bum",
         price: 80,
         description: "Beach Bum is a van inspired by surfers and travelers. It was created to be a portable home away from home, but with some cool features in it you won't find in an ordinary camper.",
@@ -25,6 +27,7 @@ export const data = [
     },
     {
         id: "4",
+        hostid: "123",
         name: "Dreamfinder",
         price: 65,
         description: "Dreamfinder is the perfect van to travel in and experience. With a ceiling height of 2.1m, you can stand up in this van and there is great head room. The floor is a beautiful glass-reinforced plastic (GRP) which is easy to clean and very hard wearing. A large rear window and large side windows make it really light inside and keep it well ventilated.",
