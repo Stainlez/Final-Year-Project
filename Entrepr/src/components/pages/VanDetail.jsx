@@ -1,12 +1,27 @@
-import { loader } from '../vanLoader';
+// import { loader } from '../vanLoader';
 
-import { data } from '../../Data';
-import { useState, useEffect } from 'react';
+// import { data } from '../../Data';
+// import { useState, useEffect } from 'react';
 import { Link, useParams, useLocation, useLoaderData } from "react-router-dom"
 
 
 
 export default function VanDetail() {
+
+    const { id } = useParams(); // Get id from URL params
+    const location = useLocation(); // Get current location
+    const { vans } = useLoaderData(); // Fetch data using loader()
+    
+    // Find the van with matching id
+    const van = vans.find(van => van.id === id);
+    if (!van) {
+        return <div>Loading...</div>; // Handle loading state or error if van not found
+    }
+    
+    // Extracting search parameters from location
+    const search = location.search;
+    // Extracting type from location state
+    const type = location.state?.type || 'all';
 
     // const location = useLocation()
     // const { id } = useParams();
@@ -21,18 +36,7 @@ export default function VanDetail() {
     //     return <div>Loading...</div>; // Handle loading state or error if van not found
     // }
 
-    const { id } = useParams(); // Get id from URL params
-    const location = useLocation(); // Get current location
-    const { vans } = useLoaderData(); // Fetch data using loader()
-    // Find the van with matching id
-    const van = vans.find(van => van.id === id);
-    if (!van) {
-        return <div>Loading...</div>; // Handle loading state or error if van not found
-    }
-    // Extracting search parameters from location
-    const search = location.search;
-    // Extracting type from location state
-    const type = location.state?.type || 'all';
+
 
     // const location = useLocation()
     // const { vans } = useLoaderData(loader);

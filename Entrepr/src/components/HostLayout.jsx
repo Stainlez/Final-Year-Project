@@ -1,5 +1,5 @@
-import React from 'react'
-import { NavLink, Outlet } from "react-router-dom"
+import React, { useEffect } from 'react' //useLayoutEffect
+import { NavLink, Outlet, useNavigate } from "react-router-dom" //redirect
 
 const HostLayout = () => {
     const activeStyles = {
@@ -7,6 +7,21 @@ const HostLayout = () => {
         textDecoration: "underline",
         color: "#161616"
     }
+
+//     const navigate = useNavigate()
+//  useEffect(()=>{
+//     // const timeout = setInterval(()=>{
+//     // }, 10 * 1000)
+//     //    return clearInterval(timeout)
+//         const user =  localStorage.getItem("loggedin")
+//         if(!user){
+//         navigate ("/login?message=You must log in first.")
+    
+//         }
+
+// }, [])
+
+
 
     
     return (
