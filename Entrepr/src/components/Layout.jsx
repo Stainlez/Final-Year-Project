@@ -4,13 +4,7 @@ import Footer from "./Footer"
 import React from 'react'
 
 const Layout = () => {
-  // return (
-  //       <>
-  //           <Header />
-  //           <Outlet />
-  //       </>
-  // )
-  return (
+return (
     <div className="site-wrapper">
         <Header />
         <main>

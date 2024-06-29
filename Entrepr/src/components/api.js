@@ -8,6 +8,11 @@ export async function getAllData() {
     return data;
 }
 
+// Function to get all users
+export async function getAllUsers() {
+    return users;
+}
+
 // Function to get data by id
 export const getDataById = (id) => {
     return data.find(item => item.id === id);

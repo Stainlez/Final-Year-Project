@@ -30,7 +30,7 @@ const HostVanDetail = () => {
                 to=".."
                 relative="path"
                 className="back-button"
-            >&larr; <span>Back to all vans</span></Link>
+            >&larr; <span>Back to your products</span></Link>
 
             <div className="host-van-detail-layout-container">
                 <div className="host-van-detail">

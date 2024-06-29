@@ -12,7 +12,6 @@ export async function loader() {
 
 // New loader that extracts "message" from the request URL
 export function messageLoader({ request }) {
-    // return new URL(request.url).searchParams.get("message");
     const message = new URL(request.url).searchParams.get("message");
     return message || null; // Ensure it returns a value or null
 }

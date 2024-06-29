@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react' //useLayoutEffect
-import { NavLink, Outlet, useNavigate } from "react-router-dom" //redirect
+// import React, { useEffect } from 'react' //useLayoutEffect
+import { NavLink, Outlet } from "react-router-dom" //redirect
 
 const HostLayout = () => {
     const activeStyles = {
@@ -25,7 +25,7 @@ const HostLayout = () => {
 
     
     return (
-        <>
+        <div className="host-layout">
             <nav className="host-nav">
                 <NavLink
                     to="."
@@ -35,18 +35,18 @@ const HostLayout = () => {
                     Dashboard
                 </NavLink>
 
-                <NavLink
+                {/* <NavLink
                     to="income"
                     style={({ isActive }) => isActive ? activeStyles : null}
                 >
                     Income
-                </NavLink>
+                </NavLink> */}
                 
                 <NavLink
-                    to="vans"
+                    to="hostproducts"
                     style={({ isActive }) => isActive ? activeStyles : null}
                 >
-                    Vans
+                    Products
                 </NavLink>
 
                 <NavLink
@@ -58,7 +58,7 @@ const HostLayout = () => {
 
             </nav>
             <Outlet />
-        </>
+        </div>
     )}
 
 export default HostLayout

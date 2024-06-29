@@ -1,12 +1,15 @@
-// import { loader } from '../vanLoader';
-
-// import { data } from '../../Data';
-// import { useState, useEffect } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { Link, useParams, useLocation, useLoaderData } from "react-router-dom"
 
 
 
 export default function VanDetail() {
+
+    const phoneNumber = "+2347012661432"; // Replace with your phone number in international format
+    const message = "Hello, I am interested in your product."; // Replace with your custom message
+    const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
+    // const whatsappLink = "https://wa.me/qr/DCEIICYATEOSN1"
 
     const { id } = useParams(); // Get id from URL params
     const location = useLocation(); // Get current location
@@ -55,7 +58,7 @@ export default function VanDetail() {
                 to={`..${search}`}
                 relative="path"
                 className="back-button"
-            >&larr; <span>Back to {type} vans</span></Link>
+            >&larr; <span>Back to {type}</span></Link>
 
             <div className="van-detail">
                 <img alt={van.name} src={van.imageUrl} />
@@ -63,9 +66,11 @@ export default function VanDetail() {
                     {van.type}
                 </i>
                 <h2>{van.name}</h2>
-                <p className="van-price"><span>${van.price}</span>/day</p>
+                {/* <p className="van-price"><span>${van.price}</span>/day</p> */}
                 <p>{van.description}</p>
-                <button className="link-button">Rent this van</button>
+                <a href={whatsappLink} className="link-button" target="_blank" rel="noopener noreferrer">
+                    <i><FontAwesomeIcon icon={faWhatsapp} style={{ marginRight: '8px' }} />WhatsApp</i>
+                </a>
             </div>
 
         </div>

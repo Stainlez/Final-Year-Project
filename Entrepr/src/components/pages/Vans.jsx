@@ -1,7 +1,7 @@
 
 // import { useState } from 'react';
 // import { data as initialData  } from '../../Data';
-import { Link, useSearchParams, useLoaderData } from "react-router-dom"
+import { Link, useSearchParams, useLoaderData, defer } from "react-router-dom"
 // import { getAllData } from '../api';
 import { loader } from '../vanLoader';
 
@@ -58,7 +58,7 @@ function VansList() {
                 <img alt={van.name} src={van.imageUrl} />
                 <div className="van-info">
                     <h3>{van.name}</h3>
-                    <p>${van.price}<span>/day</span></p>
+                    {/* <p>${van.price}<span>/day</span></p> */}
                 </div>
                 <i className={`van-type ${van.type} selected`}>{van.type}</i>
             </Link>
@@ -78,7 +78,7 @@ function VansList() {
 
     return (
         <div className="van-list-container">
-            <h1>Explore our van options</h1>
+            <h1>Explore our options</h1>
             <div className="van-list-filter-buttons">
                 <button
                     onClick={() => handleFilterChange("type", "simple")}

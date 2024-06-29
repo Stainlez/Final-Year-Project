@@ -35,7 +35,7 @@ const HostVans = ({ hostId }) => {
     
     return (
         <section>
-            <h1 className="host-vans-title">Your listed vans</h1>
+            <h1 className="host-vans-title">Your listed products</h1>
             <div className="host-vans-list">
                 <section>
                     {hostVansEls}
